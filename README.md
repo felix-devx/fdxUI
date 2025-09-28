@@ -2,6 +2,10 @@
 
 > Build beautiful, responsive interfaces with pure HTML, CSS, and JavaScript — no frameworks required.
 
+---
+
+## 📔 Summary
+
 **fdxUI** is a minimal, **drop-in UI library** designed for speed, simplicity, and accessibility. Just include a single <link> and <script>, and instantly get access to a set of well-crafted components and utilities — perfect for projects where you don’t want heavy frameworks like React or Vue.
 
 ---
