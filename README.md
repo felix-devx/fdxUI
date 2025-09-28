@@ -21,21 +21,21 @@
 
 Include fdxUI in your project by adding the following to your <head>:
 
-`html
+```html
 <link rel="stylesheet" href="https://cdn.fdxui.com/fdxui.min.css">
 <script src="https://cdn.fdxui.com/fdxui.min.js" defer></script>
-`
+```
 
 Then use components directly in your HTML:
 
-``html
+```html
 <button class="fdx-btn fdx-btn-primary">Click Me</button>
 
 <div class="fdx-card">
   <h3>Card Title</h3>
   <p>Simple, clean, and responsive.</p>
 </div>
-``
+```
 
 ---
 
@@ -57,14 +57,14 @@ Then use components directly in your HTML:
 
 fdxUI uses **CSS variables** for easy customization. For example:
 
-``css
+```css
 :root {
   --fdx-color-primary: #4f46e5;
   --fdx-color-secondary: #64748b;
   --fdx-color-bg: #ffffff;
   --fdx-color-text: #111827;
 }
-``
+```
 
 Change the variables to quickly re-theme your entire project.
 
@@ -96,4 +96,4 @@ Feel free to use it, modify it, and share it in your projects.
 
 ---
 
-### Made with ❤️ by (Your Name)
+### Made with ❤️ by Felix
