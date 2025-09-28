@@ -21,10 +21,10 @@
 
 Include fdxUI in your project by adding the following to your <head>:
 
-``html
+`html
 <link rel="stylesheet" href="https://cdn.fdxui.com/fdxui.min.css">
 <script src="https://cdn.fdxui.com/fdxui.min.js" defer></script>
-``
+`
 
 Then use components directly in your HTML:
 
