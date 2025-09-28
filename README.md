@@ -22,8 +22,8 @@
 Include fdxUI in your project by adding the following to your <head>:
 
 ```html
-<link rel="stylesheet" href="https://cdn.fdxui.com/fdxui.min.css">
-<script src="https://cdn.fdxui.com/fdxui.min.js" defer></script>
+<link rel="stylesheet" href="SOON">
+<script src="SOON" defer></script>
 ```
 
 Then use components directly in your HTML:
