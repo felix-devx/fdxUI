@@ -7,6 +7,8 @@
     "src/components/fab.js",
     "src/components/dropdown.js",
     "src/components/modal.js",
+    "src/components/tabs.js",
+    "src/components/accordion.js",
   ];
 
   files.forEach((file) => {

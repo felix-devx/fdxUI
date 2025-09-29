@@ -52,8 +52,10 @@ Then use components directly in your HTML:
 | **Navbar**    | Navigation structures   |
 | **Modal**     | Dialogs & overlays      |
 | **Dropdown**  | Menus & actions         |
+| **Tabs**      | Segmented content       |
+| **Accordion** | Collapsible content     |
 
-> More coming soon: Tabs, Accordions, Toasts, Forms, and more!
+> More coming soon: Toasts, Forms, and more!
 
 ---
 
