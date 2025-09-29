@@ -1,16 +1,19 @@
 (function () {
   const styles = `
     :root {
-      --fdx-btn-animation-speed: 0.5s;
+      /* General Button Variables */
       --fdx-btn-radius: 9999px; /* Pill shape */
       --fdx-btn-font-size: 1rem;
       --fdx-btn-padding-y: 0.6rem;
       --fdx-btn-padding-x: 1.2rem;
+
+      /* Primary Color Reference - Assuming it's defined in var.js or a default */
+      /* If --fdx-color-primary is not globally defined, it should be set here or in var.js */
+      --fdx-color-primary: #4f46e5;
+      --fdx-color-primary-light-hover: hsl(244, 78%, 70%); /* A slightly lighter shade of #4f46e5 */
     }
 
     .fdx-btn {
-      position: relative;
-      overflow: hidden;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -19,47 +22,25 @@
       font-size: var(--fdx-btn-font-size);
       font-family: system-ui, sans-serif;
       cursor: pointer;
-      border: 1px solid transparent;
-      background: var(--fdx-color-primary-light); /* Default background for buttons */
-      color: white;
-      transition: color 0.3s ease;
-      z-index: 0;
+      border: 1px solid transparent; /* Default transparent border */
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      text-decoration: none; /* Ensure no underline for anchor buttons */
     }
 
-    .fdx-btn > * {
-      position: relative;
-      z-index: 2;
-    }
-
-
-
+    /* Primary Button */
     .fdx-btn-primary {
-      background: var(--fdx-color-primary-light); /* Lighter shade */
-      border-color: var(--fdx-color-primary); /* Actual primary color border */
-      color: white;
-    }
-
-    .fdx-btn-primary::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%; /* Start off-screen */
-      width: 100%;
-      height: 100%;
-      background: var(--fdx-color-primary); /* The sweeping color */
-      border-radius: inherit; /* Inherit button's border-radius for pill shape */
-      transition: left var(--fdx-btn-animation-speed) ease-in-out;
-      z-index: 1;
-    }
-
-    .fdx-btn-primary:hover::before {
-      left: 0; /* Sweep across to cover */
+      background-color: var(--fdx-color-primary);
+      border-color: var(--fdx-color-primary);
+      color: white; /* Text is always white for primary button */
     }
 
     .fdx-btn-primary:hover {
-      color: white; /* Keep text white on hover */
+      background-color: var(--fdx-color-primary-light-hover);
+      border-color: var(--fdx-color-primary-light-hover);
+      color: white; /* Ensure text remains white on hover */
     }
 
+    /* Outline Button */
     .fdx-btn-outline {
       background: transparent;
       border-color: var(--fdx-color-primary);
@@ -71,13 +52,16 @@
       color: white;
     }
 
+    /* Ghost Button */
     .fdx-btn-ghost {
       background: transparent;
+      border-color: transparent; /* No border for ghost button */
       color: var(--fdx-color-primary);
     }
 
     .fdx-btn-ghost:hover {
-      background: rgba(79, 70, 229, 0.05);
+      background: rgba(79, 70, 229, 0.05); /* A very light, transparent hover effect */
+      border-color: transparent;
     }
   `;
 
