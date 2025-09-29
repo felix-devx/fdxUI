@@ -35,7 +35,7 @@
 
     .fdx-btn-primary {
       background: var(--fdx-color-primary-light); /* Lighter shade */
-      border-color: var(--fdx-color-primary, #4f46e5); /* Actual primary color border */
+      border-color: var(--fdx-color-primary); /* Actual primary color border */
       color: white;
     }
 
@@ -46,7 +46,7 @@
       left: -100%; /* Start off-screen */
       width: 100%;
       height: 100%;
-      background: var(--fdx-color-primary, #4f46e5); /* The sweeping color */
+      background: var(--fdx-color-primary); /* The sweeping color */
       border-radius: inherit; /* Inherit button's border-radius for pill shape */
       transition: left var(--fdx-btn-animation-speed) ease-in-out;
       z-index: 1;
