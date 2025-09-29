@@ -9,6 +9,9 @@
       --fdx-color-gray-lighter: #cccccc;
       --fdx-color-white: #ffffff;
 
+      --fdx-color-primary: #4f46e5;
+      --fdx-color-primary-light: #6D63FF; /* A solid, lighter shade of primary */
+
       --fdx-bg-primary: var(--fdx-color-gray-dark);
       --fdx-bg-secondary: var(--fdx-color-gray);
       --fdx-bg-accent: var(--fdx-color-gray-light);

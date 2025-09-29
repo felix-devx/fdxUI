@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>fdxUI Example Page</title>
+        <!-- Link to the fdxUI loader to include all components -->
+        <script src="fdxLOADER.js" defer></script>
+        <style>
+            body {
+                font-family: system-ui, sans-serif;
+                margin: 0;
+                background-color: #f8fafc;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem;
+            }
+            .container {
+                max-width: 800px;
+                width: 100%;
+                background-color: white;
+                padding: 2rem;
+                border-radius: 0.5rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                margin-bottom: 2rem;
+            }
+            h1,
+            h2,
+            h3 {
+                color: #1f2937;
+            }
+            .component-section {
+                margin-bottom: 2rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px dashed #e5e7eb;
+            }
+            .component-section:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>fdxUI Component Examples</h1>
+            <p>
+                This page demonstrates various components from the fdxUI
+                library, including the newly added Tabs and Accordions.
+            </p>
+
+            <div class="component-section">
+                <h2>Buttons</h2>
+                <button class="fdx-btn fdx-btn-primary">Primary Button</button>
+                <button class="fdx-btn fdx-btn-outline">Outline Button</button>
+                <button class="fdx-btn fdx-btn-ghost">Ghost Button</button>
+            </div>
+
+            <div class="component-section">
+                <h2>Cards</h2>
+                <div class="fdx-card" style="width: 18rem">
+                    <div class="fdx-card-header">Card Title</div>
+                    <div class="fdx-card-body">
+                        <p>
+                            This is a simple card component. It's great for
+                            displaying content in a structured way.
+                        </p>
+                    </div>
+                    <div class="fdx-card-footer">
+                        <button class="fdx-btn fdx-btn-ghost">Action</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component-section">
+                <h2>Dropdown</h2>
+                <div class="fdx-dropdown">
+                    <button class="fdx-dropdown-btn">
+                        Dropdown Menu
+                        <svg
+                            style="margin-left: 0.5rem"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                        </svg>
+                    </button>
+                    <div class="fdx-dropdown-menu">
+                        <div class="fdx-dropdown-item">Item 1</div>
+                        <div class="fdx-dropdown-item">Item 2</div>
+                        <div class="fdx-dropdown-item">Item 3</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component-section">
+                <h2>Modal</h2>
+                <button
+                    class="fdx-btn fdx-btn-primary"
+                    onclick="fdxUI.modal.open('myModal')"
+                >
+                    Open Modal
+                </button>
+
+                <div id="myModal" class="fdx-modal-overlay">
+                    <div class="fdx-modal">
+                        <button class="fdx-modal-close">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                class="bi bi-x-lg"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+                                />
+                            </svg>
+                        </button>
+                        <div class="fdx-modal-header">Modal Title</div>
+                        <div class="fdx-modal-body">
+                            <p>
+                                This is the content of the modal. You can put
+                                any HTML here.
+                            </p>
+                        </div>
+                        <div class="fdx-modal-footer">
+                            <button
+                                class="fdx-btn fdx-btn-ghost"
+                                onclick="fdxUI.modal.close('myModal')"
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                class="fdx-btn fdx-btn-primary"
+                                onclick="fdxUI.modal.close('myModal')"
+                            >
+                                Confirm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component-section">
+                <h2>Tabs</h2>
+                <div class="fdx-tabs">
+                    <div class="fdx-tab-nav">
+                        <div class="fdx-tab-nav-item">Tab 1</div>
+                        <div class="fdx-tab-nav-item">Tab 2</div>
+                        <div class="fdx-tab-nav-item">Tab 3</div>
+                    </div>
+                    <div class="fdx-tab-content">
+                        <h3>Content for Tab 1</h3>
+                        <p>
+                            This is the content that appears when Tab 1 is
+                            active.
+                        </p>
+                    </div>
+                    <div class="fdx-tab-content">
+                        <h3>Content for Tab 2</h3>
+                        <p>Here's some different content for Tab 2.</p>
+                        <p>It can be any HTML structure you need.</p>
+                    </div>
+                    <div class="fdx-tab-content">
+                        <h3>Content for Tab 3</h3>
+                        <p>And finally, the content for Tab 3.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component-section">
+                <h2>Accordions</h2>
+                <div class="fdx-accordion">
+                    <div class="fdx-accordion-item">
+                        <div class="fdx-accordion-header">
+                            Accordion Item #1
+                            <span class="fdx-accordion-icon">▼</span>
+                        </div>
+                        <div class="fdx-accordion-content">
+                            <div class="fdx-accordion-content-inner">
+                                <p>
+                                    This is the collapsible content for the
+                                    first accordion item.
+                                </p>
+                                <p>
+                                    It can contain text, images, or other
+                                    components.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fdx-accordion-item">
+                        <div class="fdx-accordion-header">
+                            Accordion Item #2
+                            <span class="fdx-accordion-icon">▼</span>
+                        </div>
+                        <div class="fdx-accordion-content">
+                            <div class="fdx-accordion-content-inner">
+                                <p>Content for the second accordion item.</p>
+                                <ul>
+                                    <li>List item 1</li>
+                                    <li>List item 2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fdx-accordion-item">
+                        <div class="fdx-accordion-header">
+                            Accordion Item #3
+                            <span class="fdx-accordion-icon">▼</span>
+                        </div>
+                        <div class="fdx-accordion-content">
+                            <div class="fdx-accordion-content-inner">
+                                <p>The third accordion's content.</p>
+                                <button class="fdx-btn fdx-btn-primary">
+                                    A Button Inside
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fdx-fab">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-plus-lg"
+                viewBox="0 0 16 16"
+            >
+                <path
+                    fill-rule="evenodd"
+                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"
+                />
+            </svg>
+        </div>
+    </body>
+</html>
